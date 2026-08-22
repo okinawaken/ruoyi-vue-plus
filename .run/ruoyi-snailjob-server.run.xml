@@ -1,0 +1,16 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="ruoyi-snailjob-server(本地环境变量)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <module name="ruoyi-snailjob-server" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="org.dromara.snailjob.SnailJobServerApplication" />
+    <envs>
+      <!-- MySQL 连接 -->
+      <env name="MYSQL_HOST" value="nicomoe.cn" />
+      <env name="MYSQL_PORT" value="30000" />
+      <env name="MYSQL_ROOT_USER" value="root" />
+      <env name="MYSQL_ROOT_PASSWORD" value="wang13587" />
+    </envs>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

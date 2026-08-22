@@ -1,0 +1,21 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="ruoyi-admin(本地环境变量)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <module name="ruoyi-admin" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="org.dromara.DromaraApplication" />
+    <envs>
+      <!-- MySQL 连接 -->
+      <env name="MYSQL_HOST" value="nicomoe.cn" />
+      <env name="MYSQL_PORT" value="30000" />
+      <env name="MYSQL_ROOT_USER" value="root" />
+      <env name="MYSQL_ROOT_PASSWORD" value="wang13587" />
+      <!-- Redis 连接 -->
+      <env name="REDIS_HOST" value="nicomoe.cn" />
+      <env name="REDIS_PORT" value="30001" />
+      <env name="REDIS_DATABASE" value="0" />
+      <env name="REDIS_PASSWORD" value="wang13587" />
+    </envs>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

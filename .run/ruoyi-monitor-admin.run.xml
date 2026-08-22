@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="ruoyi-monitor-admin(本地环境变量)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <module name="ruoyi-monitor-admin" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="org.dromara.monitor.admin.MonitorAdminApplication" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
