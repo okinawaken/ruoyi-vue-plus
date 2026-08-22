@@ -3,8 +3,6 @@ server:
 spring:
   application:
     name: ruoyi-monitor-admin
-  profiles:
-    active: @profiles.active@
 
 logging:
   config: classpath:logback-plus.xml
@@ -13,8 +11,8 @@ logging:
 spring:
   security:
     user:
-      name: @monitor.username@
-      password: @monitor.password@
+      name: ruoyi
+      password: 123456
   boot:
     admin:
       ui:
@@ -47,5 +45,5 @@ spring.boot.admin.client:
     metadata:
       username: ${spring.boot.admin.client.username}
       userpassword: ${spring.boot.admin.client.password}
-  username: @monitor.username@
-  password: @monitor.password@
+  username: ruoyi
+  password: 123456
