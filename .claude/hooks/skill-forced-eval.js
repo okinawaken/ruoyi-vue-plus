@@ -3,7 +3,7 @@
  * UserPromptSubmit Hook - 强制技能评估 (跨平台版本)
  * 功能: 开发场景下，将 Skills 激活率从约 25% 提升到 90% 以上
  *
- * 适配项目: RuoYi-Vue-Plus (纯后端项目)
+ * 适配项目: RuoYi-Vue-Plus (后端项目+前端项目)
  * 架构: 三层架构 (Controller → Service → Mapper)
  * 包名: org.dromara.*
  */
@@ -62,7 +62,7 @@ const instructions = `## 强制技能激活流程（必须执行）
 
 针对用户问题，列出匹配的技能：\`技能名: 理由\`，无匹配则写"无匹配技能"
 
-可用技能（纯后端项目）：
+可用技能（后端项目+前端项目）：
 > 注意：如果 plus-ui/ 目录存在，则包含前端代码，CRUD/dev 应同时生成前端
 - crud-development: CRUD/业务模块/Entity/Service/Controller 开发
 - api-development: API设计/RESTful/接口规范
@@ -95,6 +95,8 @@ const instructions = `## 强制技能激活流程（必须执行）
 - sms-mail: 短信/邮件/SMS/验证码/通知/SMS4j/MailUtils/邮件发送/短信发送
 - social-login: 第三方登录/微信登录/QQ登录/OAuth/OAuth2/JustAuth/社交登录/扫码登录/授权登录
 - tenant-management: 多租户/租户隔离/TenantEntity/TenantHelper/租户ID/tenantId/跨租户/动态租户/SaaS
+- ui-pc: 前端组件/ElementPlus/DictTag/Pagination/RightToolbar/ImagePreview/useDict/useDictStore/i18n
+- store-pc: Store/Pinia/defineStore/useUserStore/useDictStore/useStorage/持久化/状态管理
 
 ### 步骤 2 - 激活（逐个调用，等待每个完成）
 

@@ -241,13 +241,13 @@ description: |
 
 ## 第 3 步：注册技能
 
-技能需要在两个位置注册，才能被系统识别和激活。
+技能需要在 Hook 中注册，才能被系统识别和激活。
 
 ### 3.1 在 Hook 中注册
 
 **文件**：`.claude/hooks/skill-forced-eval.js`
 
-在 `可用技能（纯后端项目）：` 列表中添加一行：
+在 `可用技能（后端项目+前端项目）：` 列表中添加一行：
 
 ```javascript
 - {技能名}: {触发词，用/分隔}
@@ -260,63 +260,21 @@ description: |
 
 **注意**：按逻辑分组插入，不是追加到末尾。
 
-### 3.2 在 AGENTS.md 中注册
-
-**文件**：`AGENTS.md` 的"技能清单与触发条件"表格
-
-在对应分类下添加一行：
-
-```markdown
-| `{技能名}` | {触发条件简述} |
-```
-
-**示例**：
-```markdown
-| `payment-gateway` | 支付接入、退款、对账、支付宝/微信支付 |
-```
-
-### 3.3 验证注册
+### 3.2 验证注册
 
 ```bash
 # 检查 hook 文件
 grep "payment-gateway" .claude/hooks/skill-forced-eval.js
-
-# 检查 AGENTS.md
-grep "payment-gateway" AGENTS.md
 ```
 
 ---
 
-## 第 4 步：Codex 同步
-
-项目同时支持 Claude Code（`.claude/`）和 Codex CLI（`.codex/`）两个系统。
-
-### 同步步骤
-
-```bash
-# 1. 创建 Codex 目录
-mkdir -p .codex/skills/{技能名}
-
-# 2. 复制文件
-cp .claude/skills/{技能名}/SKILL.md .codex/skills/{技能名}/SKILL.md
-
-# 3. 验证一致性
-diff .claude/skills/{技能名}/SKILL.md .codex/skills/{技能名}/SKILL.md
-```
-
-**注意**：
-- `.codex/skills/` 中额外存放斜杠命令型技能（如 dev, crud, check 等），这些不需要在 `.claude/` 中创建
-- 普通技能（非斜杠命令）需要保持两个目录一致
-
----
-
-## 第 5 步：验证
+## 第 4 步：验证
 
 ### 完整检查清单
 
 **文件**：
 - [ ] `.claude/skills/{技能名}/SKILL.md` 已创建
-- [ ] `.codex/skills/{技能名}/SKILL.md` 已同步
 
 **YAML 头部**：
 - [ ] `name` 使用 kebab-case 格式
@@ -326,7 +284,6 @@ diff .claude/skills/{技能名}/SKILL.md .codex/skills/{技能名}/SKILL.md
 
 **注册**：
 - [ ] `.claude/hooks/skill-forced-eval.js` 已添加技能条目
-- [ ] `AGENTS.md` 已添加技能条目
 
 **内容**：
 - [ ] 代码示例来自项目实际代码，无虚构内容
@@ -341,7 +298,7 @@ diff .claude/skills/{技能名}/SKILL.md .codex/skills/{技能名}/SKILL.md
 
 **症状**：技能文件存在但从不被激活
 
-**原因**：只创建了 SKILL.md，没有在 Hook 和 AGENTS.md 中注册
+**原因**：只创建了 SKILL.md，没有在 Hook 中注册
 
 **解决**：完成第 3 步的两处注册
 
@@ -361,15 +318,7 @@ diff .claude/skills/{技能名}/SKILL.md .codex/skills/{技能名}/SKILL.md
 
 **解决**：编写前用 Grep/Glob 搜索确认引用的类和方法确实存在
 
-### 4. 忘记同步到 Codex
-
-**症状**：Claude Code 中正常，Codex CLI 中找不到技能
-
-**原因**：只在 `.claude/skills/` 创建，未复制到 `.codex/skills/`
-
-**解决**：`cp .claude/skills/{技能名}/SKILL.md .codex/skills/{技能名}/SKILL.md`
-
-### 5. 技能范围与现有技能重叠
+### 4. 技能范围与现有技能重叠
 
 **症状**：同一个问题触发多个技能，指导矛盾
 
