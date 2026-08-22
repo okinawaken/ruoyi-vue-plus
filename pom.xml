@@ -7,17 +7,33 @@
     <groupId>org.dromara</groupId>
     <artifactId>ruoyi-vue-plus</artifactId>
     <version>${revision}</version>
+    <packaging>pom</packaging>
 
     <name>RuoYi-Vue-Plus</name>
-    <url>https://gitee.com/dromara/RuoYi-Vue-Plus</url>
     <description>Dromara RuoYi-Vue-Plus多租户管理系统</description>
+    <url>https://gitee.com/dromara/RuoYi-Vue-Plus</url>
+
+    <modules>
+        <module>ruoyi-admin</module>
+        <module>ruoyi-common</module>
+        <module>ruoyi-extend</module>
+        <module>ruoyi-modules</module>
+    </modules>
 
     <properties>
         <revision>5.6.2</revision>
         <spring-boot.version>3.5.16</spring-boot.version>
+        <skipTests>true</skipTests>
+        <java.version>17</java.version>
+        <spring-boot.version>3.5.15</spring-boot.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>17</java.version>
+        <maven-jar-plugin.version>3.4.2</maven-jar-plugin.version>
+        <maven-war-plugin.version>3.4.0</maven-war-plugin.version>
+        <maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
+        <maven-surefire-plugin.version>3.5.3</maven-surefire-plugin.version>
+        <flatten-maven-plugin.version>1.3.0</flatten-maven-plugin.version>
+
         <mybatis.version>3.5.19</mybatis.version>
         <springdoc.version>2.8.17</springdoc.version>
         <therapi-javadoc.version>0.15.0</therapi-javadoc.version>
@@ -37,33 +53,17 @@
         <lombok.version>1.18.44</lombok.version>
         <bouncycastle.version>1.83</bouncycastle.version>
         <justauth.version>1.16.7</justauth.version>
-        <!-- 离线IP地址定位库 -->
         <ip2region.version>3.3.7</ip2region.version>
-        <!-- OSS 配置 -->
         <aws.sdk.version>2.28.22</aws.sdk.version>
-        <!-- SMS 配置 -->
         <sms4j.version>3.3.5</sms4j.version>
-        <!-- 限制框架中的fastjson版本 -->
         <fastjson.version>1.2.83</fastjson.version>
-        <!-- 面向运行时的D-ORM依赖 -->
         <anyline.version>8.7.3-20260319</anyline.version>
-        <!-- 工作流配置 -->
         <warm-flow.version>1.8.9</warm-flow.version>
-
-        <!-- 插件版本 -->
-        <maven-jar-plugin.version>3.4.2</maven-jar-plugin.version>
-        <maven-war-plugin.version>3.4.0</maven-war-plugin.version>
-        <maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
-        <maven-surefire-plugin.version>3.5.3</maven-surefire-plugin.version>
-        <flatten-maven-plugin.version>1.3.0</flatten-maven-plugin.version>
-        <!-- 打包默认跳过测试 -->
-        <skipTests>true</skipTests>
     </properties>
 
     <!-- 依赖声明 -->
     <dependencyManagement>
         <dependencies>
-
             <!-- SpringBoot的依赖配置-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -72,7 +72,6 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-
             <!-- hutool 的依赖配置-->
             <dependency>
                 <groupId>cn.hutool</groupId>
@@ -81,7 +80,6 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-
             <!-- common 的依赖配置-->
             <dependency>
                 <groupId>org.dromara</groupId>
@@ -91,37 +89,67 @@
                 <scope>import</scope>
             </dependency>
 
+            <!-- 系统管理模块 -->
+            <dependency>
+                <groupId>org.dromara</groupId>
+                <artifactId>ruoyi-system</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <!-- 定时任务模块 -->
+            <dependency>
+                <groupId>org.dromara</groupId>
+                <artifactId>ruoyi-job</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <!-- 代码生成模块 -->
+            <dependency>
+                <groupId>org.dromara</groupId>
+                <artifactId>ruoyi-generator</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <!-- 示例功能模块 -->
+            <dependency>
+                <groupId>org.dromara</groupId>
+                <artifactId>ruoyi-demo</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <!--  工作流模块  -->
+            <dependency>
+                <groupId>org.dromara</groupId>
+                <artifactId>ruoyi-workflow</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <!-- springdoc OpenAPI 接口文档 -->
             <dependency>
                 <groupId>org.springdoc</groupId>
                 <artifactId>springdoc-openapi-starter-webmvc-api</artifactId>
                 <version>${springdoc.version}</version>
             </dependency>
-
+            <!-- therapi 运行时javadoc注解 支持接口文档 -->
             <dependency>
                 <groupId>com.github.therapi</groupId>
                 <artifactId>therapi-runtime-javadoc</artifactId>
                 <version>${therapi-javadoc.version}</version>
             </dependency>
-
+            <!-- lombok 简化代码 -->
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
             </dependency>
-
+            <!-- EasyExcel 高性能Excel处理 -->
             <dependency>
                 <groupId>cn.idev.excel</groupId>
                 <artifactId>fastexcel</artifactId>
                 <version>${fastexcel.version}</version>
             </dependency>
-
             <!-- velocity代码生成使用模板 -->
             <dependency>
                 <groupId>org.apache.velocity</groupId>
                 <artifactId>velocity-engine-core</artifactId>
                 <version>${velocity.version}</version>
             </dependency>
-
             <!-- Sa-Token 权限认证, 在线文档：http://sa-token.dev33.cn/ -->
             <dependency>
                 <groupId>cn.dev33</groupId>
@@ -140,50 +168,48 @@
                     </exclusion>
                 </exclusions>
             </dependency>
+            <!-- Sa-Token 核心 -->
             <dependency>
                 <groupId>cn.dev33</groupId>
                 <artifactId>sa-token-core</artifactId>
                 <version>${satoken.version}</version>
             </dependency>
-
             <!-- dynamic-datasource 多数据源-->
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>dynamic-datasource-spring-boot3-starter</artifactId>
                 <version>${dynamic-ds.version}</version>
             </dependency>
-
+            <!-- mybatis 核心 -->
             <dependency>
                 <groupId>org.mybatis</groupId>
                 <artifactId>mybatis</artifactId>
                 <version>${mybatis.version}</version>
             </dependency>
-
+            <!-- MyBatis-Plus 核心 -->
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
                 <version>${mybatis-plus.version}</version>
             </dependency>
-
+            <!-- MyBatis-Plus 多租户SQL解析支持 -->
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-jsqlparser</artifactId>
                 <version>${mybatis-plus.version}</version>
             </dependency>
-
+            <!-- MyBatis-Plus 注解 -->
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-annotation</artifactId>
                 <version>${mybatis-plus.version}</version>
             </dependency>
-
             <!-- sql性能分析插件 -->
             <dependency>
                 <groupId>p6spy</groupId>
                 <artifactId>p6spy</artifactId>
                 <version>${p6spy.version}</version>
             </dependency>
-
             <!--  AWS SDK for Java 2.x  -->
             <dependency>
                 <groupId>software.amazon.awssdk</groupId>
@@ -208,132 +234,90 @@
                 <artifactId>sms4j-spring-boot-starter</artifactId>
                 <version>${sms4j.version}</version>
             </dependency>
-
+            <!-- SpringBoot Admin 服务端 -->
             <dependency>
                 <groupId>de.codecentric</groupId>
                 <artifactId>spring-boot-admin-starter-server</artifactId>
                 <version>${spring-boot-admin.version}</version>
             </dependency>
+            <!-- SpringBoot Admin 客户端 -->
             <dependency>
                 <groupId>de.codecentric</groupId>
                 <artifactId>spring-boot-admin-starter-client</artifactId>
                 <version>${spring-boot-admin.version}</version>
             </dependency>
-
             <!--redisson-->
             <dependency>
                 <groupId>org.redisson</groupId>
                 <artifactId>redisson-spring-boot-starter</artifactId>
                 <version>${redisson.version}</version>
             </dependency>
-
+            <!-- Lock4j 分布式锁(基于Redisson) -->
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>lock4j-redisson-spring-boot-starter</artifactId>
                 <version>${lock4j.version}</version>
             </dependency>
-
             <!-- SnailJob Client -->
             <dependency>
                 <groupId>com.aizuda</groupId>
                 <artifactId>snail-job-client-starter</artifactId>
                 <version>${snailjob.version}</version>
             </dependency>
+            <!-- SnailJob 任务执行核心 -->
             <dependency>
                 <groupId>com.aizuda</groupId>
                 <artifactId>snail-job-client-job-core</artifactId>
                 <version>${snailjob.version}</version>
             </dependency>
-
             <!-- 加密包引入 -->
             <dependency>
                 <groupId>org.bouncycastle</groupId>
                 <artifactId>bcpkix-jdk18on</artifactId>
                 <version>${bouncycastle.version}</version>
             </dependency>
-
+            <!-- MapStruct-Plus 对象映射转换 -->
             <dependency>
                 <groupId>io.github.linpeilie</groupId>
                 <artifactId>mapstruct-plus-spring-boot-starter</artifactId>
                 <version>${mapstruct-plus.version}</version>
             </dependency>
-
             <!-- Warm-Flow国产工作流引擎, 在线文档：http://warm-flow.cn/ -->
             <dependency>
                 <groupId>org.dromara.warm</groupId>
                 <artifactId>warm-flow-mybatis-plus-sb3-starter</artifactId>
                 <version>${warm-flow.version}</version>
             </dependency>
+            <!-- Warm-Flow 流程设计器UI -->
             <dependency>
                 <groupId>org.dromara.warm</groupId>
                 <artifactId>warm-flow-plugin-ui-sb-web</artifactId>
                 <version>${warm-flow.version}</version>
             </dependency>
-
             <!-- JustAuth 的依赖配置-->
             <dependency>
                 <groupId>me.zhyd.oauth</groupId>
                 <artifactId>JustAuth</artifactId>
                 <version>${justauth.version}</version>
             </dependency>
-
             <!-- 离线IP地址定位库 ip2region -->
             <dependency>
                 <groupId>org.lionsoul</groupId>
                 <artifactId>ip2region</artifactId>
                 <version>${ip2region.version}</version>
             </dependency>
-
+            <!-- fastjson JSON处理 -->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
                 <version>${fastjson.version}</version>
             </dependency>
-
-            <dependency>
-                <groupId>org.dromara</groupId>
-                <artifactId>ruoyi-system</artifactId>
-                <version>${revision}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.dromara</groupId>
-                <artifactId>ruoyi-job</artifactId>
-                <version>${revision}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.dromara</groupId>
-                <artifactId>ruoyi-generator</artifactId>
-                <version>${revision}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.dromara</groupId>
-                <artifactId>ruoyi-demo</artifactId>
-                <version>${revision}</version>
-            </dependency>
-
-            <!--  工作流模块  -->
-            <dependency>
-                <groupId>org.dromara</groupId>
-                <artifactId>ruoyi-workflow</artifactId>
-                <version>${revision}</version>
-            </dependency>
-
         </dependencies>
     </dependencyManagement>
 
-    <modules>
-        <module>ruoyi-admin</module>
-        <module>ruoyi-common</module>
-        <module>ruoyi-extend</module>
-        <module>ruoyi-modules</module>
-    </modules>
-    <packaging>pom</packaging>
-
     <build>
         <plugins>
+            <!-- maven-compiler-plugin Java编译插件 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -373,18 +357,17 @@
                     </compilerArgs>
                 </configuration>
             </plugin>
-            <!-- 单元测试使用 -->
+            <!-- maven-surefire-plugin 单元测试插件 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${maven-surefire-plugin.version}</version>
                 <configuration>
                     <argLine>-Dfile.encoding=UTF-8</argLine>
-                    <!-- 排除标签 -->
                     <excludedGroups>exclude</excludedGroups>
                 </configuration>
             </plugin>
-            <!-- 统一版本号管理 -->
+            <!-- flatten-maven-plugin 统一版本号管理插件 -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>flatten-maven-plugin</artifactId>
@@ -411,51 +394,22 @@
                 </executions>
             </plugin>
         </plugins>
+
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
-                <!-- 关闭过滤 -->
                 <filtering>false</filtering>
             </resource>
             <resource>
                 <directory>src/main/resources</directory>
-                <!-- 引入所有 匹配文件进行过滤 -->
                 <includes>
                     <include>application*</include>
                     <include>bootstrap*</include>
                     <include>banner*</include>
                 </includes>
-                <!-- 启用过滤 即该资源中的变量将会被过滤器中的值替换 -->
                 <filtering>true</filtering>
             </resource>
         </resources>
     </build>
 
-    <repositories>
-        <repository>
-            <id>public</id>
-            <name>huawei nexus</name>
-            <url>https://mirrors.huaweicloud.com/repository/maven/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-        </repository>
-    </repositories>
-
-    <pluginRepositories>
-        <pluginRepository>
-            <id>public</id>
-            <name>huawei nexus</name>
-            <url>https://mirrors.huaweicloud.com/repository/maven/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </pluginRepository>
-    </pluginRepositories>
-
 </project>
-
-
