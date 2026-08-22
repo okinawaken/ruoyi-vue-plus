@@ -50,3 +50,9 @@ nbdist/
 !*/build/*.xml
 
 .flattened-pom.xml
+
+######################################################################
+# Frontend (plus-ui / Node.js)
+
+node_modules/
+# 注意：package-lock.json 不要忽略！应用项目应提交它以锁定依赖版本，保证构建可复现。
