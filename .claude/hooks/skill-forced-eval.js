@@ -70,8 +70,6 @@ const instructions = `## 强制技能激活流程（必须执行）
 - backend-annotations: 注解/@RateLimiter/@DataScope
 - utils-toolkit: 工具类/StringUtils/MapstructUtils
 - file-oss-management: 文件上传/OSS/云存储/MinIO
-- ai-langchain4j: AI/大模型/ChatGPT/DeepSeek
-- media-processing: 图片处理/二维码/水印/Excel
 - bug-detective: Bug/报错/异常/不工作
 - error-handler: 异常处理/ServiceException
 - performance-doctor: 性能/慢查询/优化/缓存
