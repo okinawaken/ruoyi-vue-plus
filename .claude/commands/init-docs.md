@@ -543,7 +543,7 @@ plus-ui/src/components/**/*.vue
 - ✅ 定时任务：SnailJob 分布式任务调度
 - ✅ 工作流引擎：WarmFlow 审批流程
 
-详见：CLAUDE.md
+详见：.claude/docs/框架说明.md（框架模块、架构与开发规范）
 ```
 
 **如果检测到 0 个业务模块（全新项目）**：

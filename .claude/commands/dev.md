@@ -151,7 +151,7 @@ EOF
 #### 4.1 数据库规范学习
 
 ```bash
-Read CLAUDE.md
+Read .claude/docs/数据库设计规范.md
 ```
 
 #### 4.2 智能字段命名和推断
