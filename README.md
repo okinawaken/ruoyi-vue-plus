@@ -102,6 +102,6 @@ npm install
 npm run dev
 ```
 
-浏览器访问 <http://localhost:80>（Vite 自动代理后端接口）。
+浏览器访问 <http://localhost:9090>（Vite 自动代理后端接口）。
 
 默认账号：`admin` / `admin123`
