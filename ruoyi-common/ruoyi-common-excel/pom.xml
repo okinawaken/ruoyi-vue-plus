@@ -16,11 +16,13 @@
     </description>
 
     <dependencies>
+        <!-- JSON 序列化模块 -->
         <dependency>
             <groupId>org.dromara</groupId>
             <artifactId>ruoyi-common-json</artifactId>
         </dependency>
 
+        <!-- EasyExcel 高性能 Excel 处理 -->
         <dependency>
             <groupId>cn.idev.excel</groupId>
             <artifactId>fastexcel</artifactId>

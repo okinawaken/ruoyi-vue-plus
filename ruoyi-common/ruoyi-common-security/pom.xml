@@ -16,11 +16,11 @@
     </description>
 
     <dependencies>
+        <!-- Sa-Token 认证模块 -->
         <dependency>
             <groupId>org.dromara</groupId>
             <artifactId>ruoyi-common-satoken</artifactId>
         </dependency>
-
     </dependencies>
 
 </project>

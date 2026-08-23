@@ -16,93 +16,91 @@
     </description>
 
     <dependencies>
-
-        <!-- 通用工具-->
+        <!-- 核心模块 -->
         <dependency>
             <groupId>org.dromara</groupId>
             <artifactId>ruoyi-common-core</artifactId>
         </dependency>
-
+        <!-- 接口文档模块 -->
         <dependency>
             <groupId>org.dromara</groupId>
             <artifactId>ruoyi-common-doc</artifactId>
         </dependency>
-
+        <!-- 短信模块 -->
         <dependency>
             <groupId>org.dromara</groupId>
             <artifactId>ruoyi-common-sms</artifactId>
         </dependency>
-
+        <!-- 邮件模块 -->
         <dependency>
             <groupId>org.dromara</groupId>
             <artifactId>ruoyi-common-mail</artifactId>
         </dependency>
-
+        <!-- 缓存服务 -->
         <dependency>
             <groupId>org.dromara</groupId>
             <artifactId>ruoyi-common-redis</artifactId>
         </dependency>
-
+        <!-- 幂等功能模块 -->
         <dependency>
             <groupId>org.dromara</groupId>
             <artifactId>ruoyi-common-idempotent</artifactId>
         </dependency>
-
+        <!-- 数据库服务 -->
         <dependency>
             <groupId>org.dromara</groupId>
             <artifactId>ruoyi-common-mybatis</artifactId>
         </dependency>
-
+        <!-- 日志记录模块 -->
         <dependency>
             <groupId>org.dromara</groupId>
             <artifactId>ruoyi-common-log</artifactId>
         </dependency>
-
+        <!-- Excel 处理模块 -->
         <dependency>
             <groupId>org.dromara</groupId>
             <artifactId>ruoyi-common-excel</artifactId>
         </dependency>
-
+        <!-- 安全模块 -->
         <dependency>
             <groupId>org.dromara</groupId>
             <artifactId>ruoyi-common-security</artifactId>
         </dependency>
-
+        <!-- Web 服务模块 -->
         <dependency>
             <groupId>org.dromara</groupId>
             <artifactId>ruoyi-common-web</artifactId>
         </dependency>
-
+        <!-- 限流模块 -->
         <dependency>
             <groupId>org.dromara</groupId>
             <artifactId>ruoyi-common-ratelimiter</artifactId>
         </dependency>
-
+        <!-- 通用翻译模块 -->
         <dependency>
             <groupId>org.dromara</groupId>
             <artifactId>ruoyi-common-translation</artifactId>
         </dependency>
-
+        <!-- 数据脱敏模块 -->
         <dependency>
             <groupId>org.dromara</groupId>
             <artifactId>ruoyi-common-sensitive</artifactId>
         </dependency>
-
+        <!-- 数据加解密模块 -->
         <dependency>
             <groupId>org.dromara</groupId>
             <artifactId>ruoyi-common-encrypt</artifactId>
         </dependency>
-
+        <!-- 多租户模块 -->
         <dependency>
             <groupId>org.dromara</groupId>
             <artifactId>ruoyi-common-tenant</artifactId>
         </dependency>
-
+        <!-- WebSocket 模块 -->
         <dependency>
             <groupId>org.dromara</groupId>
             <artifactId>ruoyi-common-websocket</artifactId>
         </dependency>
-
     </dependencies>
 
 </project>
