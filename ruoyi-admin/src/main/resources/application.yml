@@ -313,9 +313,9 @@ spring:
           driverClassName: com.mysql.cj.jdbc.Driver
           # jdbc 所有参数配置参考 https://lionli.blog.csdn.net/article/details/122018562
           # rewriteBatchedStatements=true 批处理优化 大幅提升批量插入更新删除性能(对数据库有性能损耗 使用批量操作应考虑性能问题)
-          url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/ry-vue?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8&autoReconnect=true&rewriteBatchedStatements=true&allowPublicKeyRetrieval=true&nullCatalogMeansCurrent=true
+          url: jdbc:mysql://${MYSQL_HOST:nicomoe.cn}:${MYSQL_PORT:30000}/ry-vue?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8&autoReconnect=true&rewriteBatchedStatements=true&allowPublicKeyRetrieval=true&nullCatalogMeansCurrent=true
           username: ${MYSQL_ROOT_USER:root}
-          password: ${MYSQL_ROOT_PASSWORD:root}
+          password: ${MYSQL_ROOT_PASSWORD:wang13587}
 #        # 从库数据源
 #        slave:
 #          lazy: true
@@ -362,13 +362,13 @@ spring:
 spring.data:
   redis:
     # 地址
-    host: ${REDIS_HOST:localhost}
+    host: ${REDIS_HOST:nicomoe.cn}
     # 端口，默认为6379
-    port: ${REDIS_PORT:6379}
+    port: ${REDIS_PORT:30001}
     # 数据库索引
     database: ${REDIS_DATABASE:0}
     # redis 密码必须配置
-    password: ${REDIS_PASSWORD:ruoyi123}
+    password: ${REDIS_PASSWORD:wang13587}
     # 连接超时时间
     timeout: 10s
     # 是否开启ssl

@@ -13,9 +13,9 @@ spring:
     type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
     # 连接信息通过环境变量注入 未设置时使用冒号后的默认值
-    url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/ry-vue?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://${MYSQL_HOST:nicomoe.cn}:${MYSQL_PORT:30000}/ry-vue?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
     username: ${MYSQL_ROOT_USER:root}
-    password: ${MYSQL_ROOT_PASSWORD:root}
+    password: ${MYSQL_ROOT_PASSWORD:wang13587}
     hikari:
       connection-timeout: 30000
       validation-timeout: 5000
