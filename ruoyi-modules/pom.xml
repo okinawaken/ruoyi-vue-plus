@@ -2,12 +2,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
     <parent>
-        <artifactId>ruoyi-vue-plus</artifactId>
         <groupId>org.dromara</groupId>
+        <artifactId>ruoyi-vue-plus</artifactId>
         <version>${revision}</version>
     </parent>
-    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>ruoyi-modules</artifactId>
+    <packaging>pom</packaging>
+    <description>业务模块</description>
 
     <modules>
         <module>ruoyi-demo</module>
@@ -16,12 +21,5 @@
         <module>ruoyi-system</module>
         <module>ruoyi-workflow</module>
     </modules>
-
-    <artifactId>ruoyi-modules</artifactId>
-    <packaging>pom</packaging>
-
-    <description>
-        ruoyi-modules 业务模块
-    </description>
 
 </project>

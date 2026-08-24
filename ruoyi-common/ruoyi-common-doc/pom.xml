@@ -2,18 +2,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
     <parent>
         <groupId>org.dromara</groupId>
         <artifactId>ruoyi-common</artifactId>
         <version>${revision}</version>
     </parent>
-    <modelVersion>4.0.0</modelVersion>
 
     <artifactId>ruoyi-common-doc</artifactId>
-
-    <description>
-        ruoyi-common-doc 系统接口
-    </description>
+    <description>ruoyi-common-doc 系统接口</description>
 
     <dependencies>
         <!-- 核心模块 -->
@@ -26,7 +24,7 @@
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-starter-webmvc-api</artifactId>
         </dependency>
-        <!-- therapi 运行时 javadoc 注解支持接口文档 -->
+        <!-- Therapi 运行时 Javadoc 注解支持接口文档 -->
         <dependency>
             <groupId>com.github.therapi</groupId>
             <artifactId>therapi-runtime-javadoc</artifactId>

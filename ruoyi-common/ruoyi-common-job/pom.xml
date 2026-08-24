@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xmlns="http://maven.apache.org/POM/4.0.0"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
     <parent>
         <groupId>org.dromara</groupId>
         <artifactId>ruoyi-common</artifactId>
         <version>${revision}</version>
     </parent>
-    <modelVersion>4.0.0</modelVersion>
 
     <artifactId>ruoyi-common-job</artifactId>
-
-    <description>
-        ruoyi-common-job 定时任务
-    </description>
+    <description>ruoyi-common-job 定时任务</description>
 
     <dependencies>
         <!-- 核心模块 -->
@@ -22,7 +20,7 @@
             <artifactId>ruoyi-common-core</artifactId>
         </dependency>
 
-        <!-- SnailJob Client -->
+        <!-- SnailJob 客户端 -->
         <dependency>
             <groupId>com.aizuda</groupId>
             <artifactId>snail-job-client-starter</artifactId>
@@ -38,10 +36,11 @@
             <artifactId>lombok</artifactId>
         </dependency>
 
-        <!-- SpringBoot 自动配置 -->
+        <!-- Spring Boot 自动配置 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-autoconfigure</artifactId>
         </dependency>
     </dependencies>
+
 </project>

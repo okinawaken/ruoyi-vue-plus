@@ -2,18 +2,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
     <parent>
         <groupId>org.dromara</groupId>
         <artifactId>ruoyi-common</artifactId>
         <version>${revision}</version>
     </parent>
-    <modelVersion>4.0.0</modelVersion>
 
     <artifactId>ruoyi-common-web</artifactId>
-
-    <description>
-        ruoyi-common-web web服务
-    </description>
+    <description>ruoyi-common-web web服务</description>
 
     <dependencies>
         <!-- JSON 序列化模块 -->
@@ -22,23 +20,23 @@
             <artifactId>ruoyi-common-json</artifactId>
         </dependency>
 
-        <!-- SpringBoot Web 容器 -->
+        <!-- Spring Boot Web 容器 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
             <exclusions>
                 <exclusion>
-                    <artifactId>spring-boot-starter-tomcat</artifactId>
                     <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-tomcat</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>
-        <!-- web 容器使用 undertow 性能更强 -->
+        <!-- Web 容器使用 Undertow 性能更强 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-undertow</artifactId>
         </dependency>
-        <!-- SpringBoot 监控端点 -->
+        <!-- Spring Boot 监控端点 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>

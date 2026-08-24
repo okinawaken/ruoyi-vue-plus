@@ -2,18 +2,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
     <parent>
         <groupId>org.dromara</groupId>
         <artifactId>ruoyi-modules</artifactId>
         <version>${revision}</version>
     </parent>
-    <modelVersion>4.0.0</modelVersion>
 
     <artifactId>ruoyi-generator</artifactId>
-
-    <description>
-        generator 代码生成
-    </description>
+    <packaging>jar</packaging>
+    <description>代码生成模块</description>
 
     <dependencies>
         <!-- 核心模块 -->
@@ -47,7 +46,7 @@
             <artifactId>ruoyi-common-idempotent</artifactId>
         </dependency>
 
-        <!-- velocity 代码生成使用模板 -->
+        <!-- Velocity 代码生成使用模板 -->
         <dependency>
             <groupId>org.apache.velocity</groupId>
             <artifactId>velocity-engine-core</artifactId>
