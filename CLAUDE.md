@@ -3,10 +3,18 @@
 ### 1.1 后端（Maven 多模块）
 
 ```bash
-# 打包后端（生成 ruoyi-admin/target/ruoyi-admin.jar）
-mvn clean package -pl ruoyi-admin -am
+# 完整启动：按顺序启动监控 → 调度 → 主应用（均为独立 Spring Boot 应用）
 
-# 启动后端（默认连接 localhost:3306/ry-vue、localhost:6379）
+# 1. Spring Boot Admin 服务监控
+mvn clean package -pl ruoyi-extend/ruoyi-monitor-admin -am
+java -jar ruoyi-extend/ruoyi-monitor-admin/target/ruoyi-monitor-admin.jar
+
+# 2. SnailJob 分布式任务调度
+mvn clean package -pl ruoyi-extend/ruoyi-snailjob-server -am
+java -jar ruoyi-extend/ruoyi-snailjob-server/target/ruoyi-snailjob-server.jar
+
+# 3. 打包并启动主应用
+mvn clean package -pl ruoyi-admin -am
 java -jar ruoyi-admin/target/ruoyi-admin.jar
 ```
 

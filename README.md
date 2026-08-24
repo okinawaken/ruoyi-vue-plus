@@ -83,14 +83,36 @@ mysql -uroot -p ry-vue < script/sql/ry_job.sql        # 使用任务调度时执
 | `REDIS_DATABASE` | 0 | Redis 数据库编号 |
 | `REDIS_PASSWORD` | ruoyi123 | Redis 密码 |
 
+后端包含多个独立 Spring Boot 应用，按业务需要选择启动方式：
+
+**最小化启动**（仅需启动主应用 `ruoyi-admin`）：
+
 ```bash
-# 方式一：Maven 命令启动
 mvn clean package -pl ruoyi-admin -am
 java -jar ruoyi-admin/target/ruoyi-admin.jar
-
-# 方式二：IDEA 直接运行主类 org.dromara.DromaraApplication
-# 推荐使用 .run/ 目录下的共享运行配置（已预置环境变量占位）
 ```
+
+**完整启动**（按顺序启动监控 → 调度 → 主应用）：
+
+```bash
+# 1. Spring Boot Admin 服务监控
+mvn clean package -pl ruoyi-extend/ruoyi-monitor-admin -am
+java -jar ruoyi-extend/ruoyi-monitor-admin/target/ruoyi-monitor-admin.jar
+
+# 2. SnailJob 分布式任务调度
+mvn clean package -pl ruoyi-extend/ruoyi-snailjob-server -am
+java -jar ruoyi-extend/ruoyi-snailjob-server/target/ruoyi-snailjob-server.jar
+
+# 3. 主应用
+mvn clean package -pl ruoyi-admin -am
+java -jar ruoyi-admin/target/ruoyi-admin.jar
+```
+
+**IDEA 直接运行**（推荐使用 `.run/` 目录下的共享运行配置，已预置环境变量占位）：
+
+- `ruoyi-monitor-admin` → 主类 `org.dromara.monitor.admin.MonitorAdminApplication`
+- `ruoyi-snailjob-server` → 主类 `org.dromara.snailjob.SnailJobServerApplication`
+- `ruoyi-admin` → 主类 `org.dromara.DromaraApplication`
 
 启动成功后访问接口文档：<http://localhost:8080/swagger-ui/index.html>
 
