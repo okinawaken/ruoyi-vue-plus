@@ -90,7 +90,6 @@ const instructions = `## 强制技能激活流程（必须执行）
 - redis-cache: Redis/缓存/@Cacheable/@CacheEvict/RedisUtils/分布式锁/RLock/限流
 - scheduled-jobs: 定时任务/SnailJob/@Scheduled/@JobExecutor/任务调度/重试机制
 - add-skill: 添加技能/创建技能/新技能/技能开发/写技能
-- banana-image: 生成图片/AI图片/产品图/海报/缩略图/4K/高清/制作图片
 - websocket-sse: WebSocket/SSE/实时推送/消息通知/在线状态/双向通信/实时通信
 - sms-mail: 短信/邮件/SMS/验证码/通知/SMS4j/MailUtils/邮件发送/短信发送
 - social-login: 第三方登录/微信登录/QQ登录/OAuth/OAuth2/JustAuth/社交登录/扫码登录/授权登录

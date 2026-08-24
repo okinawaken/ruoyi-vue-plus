@@ -146,7 +146,7 @@ description: |
 | 架构决策 | architecture-design, tech-decision, brainstorm, project-navigator |
 | 工具流程 | git-workflow, task-tracker, add-skill |
 | 前端（需 plus-ui） | ui-pc, store-pc |
-| 特殊功能 | banana-image, collaborating-with-codex, collaborating-with-gemini |
+| 特殊功能 | collaborating-with-codex, collaborating-with-gemini |
 
 如果新技能与现有技能有交集，在 SKILL.md 中用"注意"段落说明边界：
 ```markdown
