@@ -15,6 +15,12 @@
     <description>Spring Boot Admin 服务监控</description>
 
     <dependencies>
+        <!-- Lombok 简化代码 -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
         <!-- Spring Boot Web 容器 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -45,12 +51,6 @@
         <dependency>
             <groupId>de.codecentric</groupId>
             <artifactId>spring-boot-admin-starter-client</artifactId>
-        </dependency>
-
-        <!-- Lombok 简化代码 -->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
         </dependency>
     </dependencies>
 

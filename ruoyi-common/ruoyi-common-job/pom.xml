@@ -20,11 +20,6 @@
             <artifactId>ruoyi-common-core</artifactId>
         </dependency>
 
-        <!-- SnailJob 客户端 -->
-        <dependency>
-            <groupId>com.aizuda</groupId>
-            <artifactId>snail-job-client-starter</artifactId>
-        </dependency>
         <!-- SnailJob 任务执行核心 -->
         <dependency>
             <groupId>com.aizuda</groupId>
@@ -36,6 +31,11 @@
             <artifactId>lombok</artifactId>
         </dependency>
 
+        <!-- SnailJob 客户端 -->
+        <dependency>
+            <groupId>com.aizuda</groupId>
+            <artifactId>snail-job-client-starter</artifactId>
+        </dependency>
         <!-- Spring Boot 自动配置 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

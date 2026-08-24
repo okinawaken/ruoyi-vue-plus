@@ -119,12 +119,6 @@
                 <version>${revision}</version>
             </dependency>
 
-            <!-- SpringDoc OpenAPI 接口文档 -->
-            <dependency>
-                <groupId>org.springdoc</groupId>
-                <artifactId>springdoc-openapi-starter-webmvc-api</artifactId>
-                <version>${springdoc.version}</version>
-            </dependency>
             <!-- Therapi 运行时 Javadoc 注解支持接口文档 -->
             <dependency>
                 <groupId>com.github.therapi</groupId>
@@ -149,12 +143,6 @@
                 <artifactId>velocity-engine-core</artifactId>
                 <version>${velocity.version}</version>
             </dependency>
-            <!-- Sa-Token 权限认证，在线文档：http://sa-token.dev33.cn/ -->
-            <dependency>
-                <groupId>cn.dev33</groupId>
-                <artifactId>sa-token-spring-boot3-starter</artifactId>
-                <version>${satoken.version}</version>
-            </dependency>
             <!-- Sa-Token 整合 JWT -->
             <dependency>
                 <groupId>cn.dev33</groupId>
@@ -173,23 +161,11 @@
                 <artifactId>sa-token-core</artifactId>
                 <version>${satoken.version}</version>
             </dependency>
-            <!-- dynamic-datasource 多数据源 -->
-            <dependency>
-                <groupId>com.baomidou</groupId>
-                <artifactId>dynamic-datasource-spring-boot3-starter</artifactId>
-                <version>${dynamic-ds.version}</version>
-            </dependency>
             <!-- MyBatis 核心 -->
             <dependency>
                 <groupId>org.mybatis</groupId>
                 <artifactId>mybatis</artifactId>
                 <version>${mybatis.version}</version>
-            </dependency>
-            <!-- MyBatis-Plus 核心 -->
-            <dependency>
-                <groupId>com.baomidou</groupId>
-                <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
-                <version>${mybatis-plus.version}</version>
             </dependency>
             <!-- MyBatis-Plus 多租户 SQL 解析支持 -->
             <dependency>
@@ -227,6 +203,67 @@
                 <artifactId>netty-nio-client</artifactId>
                 <version>${aws.sdk.version}</version>
             </dependency>
+            <!-- SnailJob 任务执行核心 -->
+            <dependency>
+                <groupId>com.aizuda</groupId>
+                <artifactId>snail-job-client-job-core</artifactId>
+                <version>${snailjob.version}</version>
+            </dependency>
+            <!-- BouncyCastle 加密包 -->
+            <dependency>
+                <groupId>org.bouncycastle</groupId>
+                <artifactId>bcpkix-jdk18on</artifactId>
+                <version>${bouncycastle.version}</version>
+            </dependency>
+            <!-- Warm-Flow 流程设计器 UI -->
+            <dependency>
+                <groupId>org.dromara.warm</groupId>
+                <artifactId>warm-flow-plugin-ui-sb-web</artifactId>
+                <version>${warm-flow.version}</version>
+            </dependency>
+            <!-- JustAuth 的依赖配置 -->
+            <dependency>
+                <groupId>me.zhyd.oauth</groupId>
+                <artifactId>JustAuth</artifactId>
+                <version>${justauth.version}</version>
+            </dependency>
+            <!-- 离线 IP 地址定位库 ip2region -->
+            <dependency>
+                <groupId>org.lionsoul</groupId>
+                <artifactId>ip2region</artifactId>
+                <version>${ip2region.version}</version>
+            </dependency>
+            <!-- Fastjson JSON 处理 -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+
+            <!-- SpringDoc OpenAPI 接口文档 -->
+            <dependency>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-starter-webmvc-api</artifactId>
+                <version>${springdoc.version}</version>
+            </dependency>
+            <!-- Sa-Token 权限认证，在线文档：http://sa-token.dev33.cn/ -->
+            <dependency>
+                <groupId>cn.dev33</groupId>
+                <artifactId>sa-token-spring-boot3-starter</artifactId>
+                <version>${satoken.version}</version>
+            </dependency>
+            <!-- dynamic-datasource 多数据源 -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>dynamic-datasource-spring-boot3-starter</artifactId>
+                <version>${dynamic-ds.version}</version>
+            </dependency>
+            <!-- MyBatis-Plus 核心 -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
             <!-- 短信 sms4j -->
             <dependency>
                 <groupId>org.dromara.sms4j</groupId>
@@ -263,18 +300,6 @@
                 <artifactId>snail-job-client-starter</artifactId>
                 <version>${snailjob.version}</version>
             </dependency>
-            <!-- SnailJob 任务执行核心 -->
-            <dependency>
-                <groupId>com.aizuda</groupId>
-                <artifactId>snail-job-client-job-core</artifactId>
-                <version>${snailjob.version}</version>
-            </dependency>
-            <!-- BouncyCastle 加密包 -->
-            <dependency>
-                <groupId>org.bouncycastle</groupId>
-                <artifactId>bcpkix-jdk18on</artifactId>
-                <version>${bouncycastle.version}</version>
-            </dependency>
             <!-- MapStruct-Plus 对象映射转换 -->
             <dependency>
                 <groupId>io.github.linpeilie</groupId>
@@ -286,30 +311,6 @@
                 <groupId>org.dromara.warm</groupId>
                 <artifactId>warm-flow-mybatis-plus-sb3-starter</artifactId>
                 <version>${warm-flow.version}</version>
-            </dependency>
-            <!-- Warm-Flow 流程设计器 UI -->
-            <dependency>
-                <groupId>org.dromara.warm</groupId>
-                <artifactId>warm-flow-plugin-ui-sb-web</artifactId>
-                <version>${warm-flow.version}</version>
-            </dependency>
-            <!-- JustAuth 的依赖配置 -->
-            <dependency>
-                <groupId>me.zhyd.oauth</groupId>
-                <artifactId>JustAuth</artifactId>
-                <version>${justauth.version}</version>
-            </dependency>
-            <!-- 离线 IP 地址定位库 ip2region -->
-            <dependency>
-                <groupId>org.lionsoul</groupId>
-                <artifactId>ip2region</artifactId>
-                <version>${ip2region.version}</version>
-            </dependency>
-            <!-- Fastjson JSON 处理 -->
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>fastjson</artifactId>
-                <version>${fastjson.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

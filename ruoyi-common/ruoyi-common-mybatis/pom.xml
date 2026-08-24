@@ -25,16 +25,6 @@
             <artifactId>ruoyi-common-satoken</artifactId>
         </dependency>
 
-        <!-- dynamic-datasource 多数据源 -->
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>dynamic-datasource-spring-boot3-starter</artifactId>
-        </dependency>
-        <!-- MyBatis-Plus 核心 -->
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
-        </dependency>
         <!-- MyBatis-Plus 多租户 SQL 解析支持 -->
         <dependency>
             <groupId>com.baomidou</groupId>
@@ -44,6 +34,17 @@
         <dependency>
             <groupId>p6spy</groupId>
             <artifactId>p6spy</artifactId>
+        </dependency>
+
+        <!-- dynamic-datasource 多数据源 -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>dynamic-datasource-spring-boot3-starter</artifactId>
+        </dependency>
+        <!-- MyBatis-Plus 核心 -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
         </dependency>
     </dependencies>
 

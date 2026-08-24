@@ -75,15 +75,16 @@
             <groupId>org.dromara</groupId>
             <artifactId>ruoyi-common-security</artifactId>
         </dependency>
-        <!-- Warm-Flow 工作流引擎 -->
-        <dependency>
-            <groupId>org.dromara.warm</groupId>
-            <artifactId>warm-flow-mybatis-plus-sb3-starter</artifactId>
-        </dependency>
         <!-- Warm-Flow 流程设计器 UI -->
         <dependency>
             <groupId>org.dromara.warm</groupId>
             <artifactId>warm-flow-plugin-ui-sb-web</artifactId>
+        </dependency>
+
+        <!-- Warm-Flow 工作流引擎 -->
+        <dependency>
+            <groupId>org.dromara.warm</groupId>
+            <artifactId>warm-flow-mybatis-plus-sb3-starter</artifactId>
         </dependency>
     </dependencies>
 

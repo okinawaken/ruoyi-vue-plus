@@ -20,6 +20,17 @@
             <artifactId>ruoyi-common-json</artifactId>
         </dependency>
 
+        <!-- Hutool 验证码工具 -->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-captcha</artifactId>
+        </dependency>
+        <!-- Hutool 加密工具 -->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-crypto</artifactId>
+        </dependency>
+
         <!-- Spring Boot Web 容器 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -40,16 +51,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-        <!-- Hutool 验证码工具 -->
-        <dependency>
-            <groupId>cn.hutool</groupId>
-            <artifactId>hutool-captcha</artifactId>
-        </dependency>
-        <!-- Hutool 加密工具 -->
-        <dependency>
-            <groupId>cn.hutool</groupId>
-            <artifactId>hutool-crypto</artifactId>
         </dependency>
     </dependencies>
 

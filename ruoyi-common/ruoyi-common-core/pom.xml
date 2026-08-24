@@ -14,11 +14,6 @@
     <description>ruoyi-common-core 核心模块</description>
 
     <dependencies>
-        <!-- 离线 IP 地址定位库 -->
-        <dependency>
-            <groupId>org.lionsoul</groupId>
-            <artifactId>ip2region</artifactId>
-        </dependency>
         <!-- Spring 框架基本的核心工具 -->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -28,6 +23,11 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
+        </dependency>
+        <!-- 离线 IP 地址定位库 -->
+        <dependency>
+            <groupId>org.lionsoul</groupId>
+            <artifactId>ip2region</artifactId>
         </dependency>
         <!-- 常用工具类 -->
         <dependency>

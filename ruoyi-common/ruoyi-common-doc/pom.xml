@@ -19,11 +19,6 @@
             <groupId>org.dromara</groupId>
             <artifactId>ruoyi-common-core</artifactId>
         </dependency>
-        <!-- SpringDoc OpenAPI 接口文档 -->
-        <dependency>
-            <groupId>org.springdoc</groupId>
-            <artifactId>springdoc-openapi-starter-webmvc-api</artifactId>
-        </dependency>
         <!-- Therapi 运行时 Javadoc 注解支持接口文档 -->
         <dependency>
             <groupId>com.github.therapi</groupId>
@@ -33,6 +28,12 @@
         <dependency>
             <groupId>com.fasterxml.jackson.module</groupId>
             <artifactId>jackson-module-kotlin</artifactId>
+        </dependency>
+
+        <!-- SpringDoc OpenAPI 接口文档 -->
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-api</artifactId>
         </dependency>
     </dependencies>
 

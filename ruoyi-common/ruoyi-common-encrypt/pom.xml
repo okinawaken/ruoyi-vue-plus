@@ -20,6 +20,11 @@
             <artifactId>ruoyi-common-core</artifactId>
         </dependency>
 
+        <!-- Spring Web MVC -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+        </dependency>
         <!-- BouncyCastle 加密包 -->
         <dependency>
             <groupId>org.bouncycastle</groupId>
@@ -29,11 +34,6 @@
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-crypto</artifactId>
-        </dependency>
-        <!-- Spring Web MVC -->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-webmvc</artifactId>
         </dependency>
 
         <!-- MyBatis-Plus 数据库加密支持（可选） -->
