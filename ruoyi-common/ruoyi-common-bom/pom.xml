@@ -29,6 +29,12 @@
                 <artifactId>ruoyi-common-doc</artifactId>
                 <version>${revision}</version>
             </dependency>
+            <!-- 数据库加解密模块 -->
+            <dependency>
+                <groupId>org.dromara</groupId>
+                <artifactId>ruoyi-common-encrypt</artifactId>
+                <version>${revision}</version>
+            </dependency>
             <!-- excel -->
             <dependency>
                 <groupId>org.dromara</groupId>
@@ -45,6 +51,12 @@
             <dependency>
                 <groupId>org.dromara</groupId>
                 <artifactId>ruoyi-common-job</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <!-- 序列化模块 -->
+            <dependency>
+                <groupId>org.dromara</groupId>
+                <artifactId>ruoyi-common-json</artifactId>
                 <version>${revision}</version>
             </dependency>
             <!-- 日志记录 -->
@@ -95,6 +107,12 @@
                 <artifactId>ruoyi-common-security</artifactId>
                 <version>${revision}</version>
             </dependency>
+            <!-- 脱敏模块 -->
+            <dependency>
+                <groupId>org.dromara</groupId>
+                <artifactId>ruoyi-common-sensitive</artifactId>
+                <version>${revision}</version>
+            </dependency>
             <!-- 短信模块 -->
             <dependency>
                 <groupId>org.dromara</groupId>
@@ -107,34 +125,10 @@
                 <artifactId>ruoyi-common-social</artifactId>
                 <version>${revision}</version>
             </dependency>
-            <!-- web服务 -->
+            <!-- SSE模块 -->
             <dependency>
                 <groupId>org.dromara</groupId>
-                <artifactId>ruoyi-common-web</artifactId>
-                <version>${revision}</version>
-            </dependency>
-            <!-- 翻译模块 -->
-            <dependency>
-                <groupId>org.dromara</groupId>
-                <artifactId>ruoyi-common-translation</artifactId>
-                <version>${revision}</version>
-            </dependency>
-            <!-- 脱敏模块 -->
-            <dependency>
-                <groupId>org.dromara</groupId>
-                <artifactId>ruoyi-common-sensitive</artifactId>
-                <version>${revision}</version>
-            </dependency>
-            <!-- 序列化模块 -->
-            <dependency>
-                <groupId>org.dromara</groupId>
-                <artifactId>ruoyi-common-json</artifactId>
-                <version>${revision}</version>
-            </dependency>
-            <!-- 数据库加解密模块 -->
-            <dependency>
-                <groupId>org.dromara</groupId>
-                <artifactId>ruoyi-common-encrypt</artifactId>
+                <artifactId>ruoyi-common-sse</artifactId>
                 <version>${revision}</version>
             </dependency>
             <!-- 租户模块 -->
@@ -143,16 +137,22 @@
                 <artifactId>ruoyi-common-tenant</artifactId>
                 <version>${revision}</version>
             </dependency>
+            <!-- 翻译模块 -->
+            <dependency>
+                <groupId>org.dromara</groupId>
+                <artifactId>ruoyi-common-translation</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <!-- web服务 -->
+            <dependency>
+                <groupId>org.dromara</groupId>
+                <artifactId>ruoyi-common-web</artifactId>
+                <version>${revision}</version>
+            </dependency>
             <!-- WebSocket模块 -->
             <dependency>
                 <groupId>org.dromara</groupId>
                 <artifactId>ruoyi-common-websocket</artifactId>
-                <version>${revision}</version>
-            </dependency>
-            <!-- SSE模块 -->
-            <dependency>
-                <groupId>org.dromara</groupId>
-                <artifactId>ruoyi-common-sse</artifactId>
                 <version>${revision}</version>
             </dependency>
         </dependencies>
