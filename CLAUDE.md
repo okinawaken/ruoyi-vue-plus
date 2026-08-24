@@ -1,6 +1,6 @@
-## 常用命令
+## 1. 常用命令
 
-### 后端（Maven 多模块）
+### 1.1 后端（Maven 多模块）
 
 ```bash
 # 打包后端（生成 ruoyi-admin/target/ruoyi-admin.jar）
@@ -10,7 +10,7 @@ mvn clean package -pl ruoyi-admin -am
 java -jar ruoyi-admin/target/ruoyi-admin.jar
 ```
 
-### 前端（plus-ui）
+### 1.2 前端（plus-ui）
 
 ```bash
 cd plus-ui
@@ -24,9 +24,9 @@ npm run prettier           # 格式化全部文件
 
 前端访问 `http://localhost:9090`，默认账号 `admin` / `admin123`。
 
-## 项目文档与命令
+## 2. 项目文档与命令
 
-### 📚 文档索引
+### 2.1 文档索引
 
 | 路径 | 内容 |
 |------|------|
@@ -34,7 +34,7 @@ npm run prettier           # 格式化全部文件
 | `.claude/skills/` | 各功能开发技能（CRUD、数据权限、安全、定时任务等） |
 | `.claude/commands/` | 10 个自定义命令 |
 
-### ⌨️ 常用命令速查
+### 2.2 常用命令速查
 
 | 命令 | 用途 | 说明 |
 |------|------|------|
