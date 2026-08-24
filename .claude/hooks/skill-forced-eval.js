@@ -82,8 +82,6 @@ const instructions = `## 强制技能激活流程（必须执行）
 - task-tracker: 任务跟踪/记录进度/继续任务
 - tech-decision: 技术选型/方案对比
 - brainstorm: 头脑风暴/创意/方案设计
-- collaborating-with-codex: Codex协作/多模型/算法分析
-- collaborating-with-gemini: Gemini协作/前端原型/UI设计
 - workflow-engine: 工作流/审批流/Flowable/流程
 - test-development: 测试/单元测试/@Test/JUnit5/Mockito
 - json-serialization: JSON/序列化/反序列化/JsonUtils/日期格式/BigDecimal/精度/类型转换
