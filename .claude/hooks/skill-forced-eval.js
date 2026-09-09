@@ -79,7 +79,6 @@ const instructions = `## 强制技能激活流程（必须执行）
 - code-patterns: 规范/禁止/命名/Git提交
 - project-navigator: 项目结构/文件在哪/定位
 - git-workflow: Git/提交/commit/分支
-- task-tracker: 任务跟踪/记录进度/继续任务
 - tech-decision: 技术选型/方案对比
 - brainstorm: 头脑风暴/创意/方案设计
 - workflow-engine: 工作流/审批流/Flowable/流程
