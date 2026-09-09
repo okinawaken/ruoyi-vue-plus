@@ -21,15 +21,15 @@ description: |
 
 | 技术 | 版本 | 用途 | 模块位置 |
 |------|------|------|---------|
-| **Spring Boot** | 3.5.9 | 基础框架 | 全局 |
+| **Spring Boot** | 3.5.16 | 基础框架 | 全局 |
 | **Java** | 17 | 开发语言 | 全局 |
 | **MyBatis-Plus** | 3.5.16 | ORM 框架 | ruoyi-common-mybatis |
-| **Sa-Token** | 1.44.0 | 权限认证 | ruoyi-common-satoken |
+| **Sa-Token** | 1.45.0 | 权限认证 | ruoyi-common-satoken |
 | **Hutool** | 5.8.43 | 工具库 | ruoyi-common-core |
 | **Redisson** | 3.52.0 | Redis 客户端增强 | ruoyi-common-redis |
 | **MapStruct-Plus** | 1.5.0 | 对象映射 | 全局 |
-| **SpringDoc** | 2.8.15 | API 文档 | ruoyi-common-doc |
-| **Lombok** | 1.18.42 | 代码简化 | 全局 |
+| **SpringDoc** | 2.8.17 | API 文档 | ruoyi-common-doc |
+| **Lombok** | 1.18.44 | 代码简化 | 全局 |
 | **FastExcel** | 1.3.0 | Excel 处理 | ruoyi-common-excel |
 
 ### 后端扩展技术
@@ -37,15 +37,15 @@ description: |
 | 技术 | 版本 | 用途 | 模块位置 |
 |------|------|------|---------|
 | **Lock4j** | 2.2.7 | 分布式锁 | ruoyi-common-redis |
-| **SnailJob** | 1.9.0 | 分布式任务调度 | ruoyi-common-job |
+| **SnailJob** | 1.10.0 | 分布式任务调度 | ruoyi-common-job |
 | **AWS SDK** | 2.28.22 | 对象存储 | ruoyi-common-oss |
 | **SMS4j** | 3.3.5 | 短信服务 | ruoyi-common-sms |
 | **JustAuth** | 1.16.7 | 第三方登录 | ruoyi-common-social |
-| **IP2Region** | 3.3.4 | IP 地址定位 | ruoyi-common-core |
+| **IP2Region** | 3.3.7 | IP 地址定位 | ruoyi-common-core |
 | **P6spy** | 3.9.1 | SQL 日志 | 开发环境 |
 | **Dynamic-DS** | 4.3.1 | 多数据源 | ruoyi-common-mybatis |
-| **Warm-Flow** | 1.8.4 | 工作流引擎 | ruoyi-workflow |
-| **BouncyCastle** | 1.80 | 加密算法 | ruoyi-common-encrypt |
+| **Warm-Flow** | 1.8.9 | 工作流引擎 | ruoyi-workflow |
+| **BouncyCastle** | 1.83 | 加密算法 | ruoyi-common-encrypt |
 
 ---
 
