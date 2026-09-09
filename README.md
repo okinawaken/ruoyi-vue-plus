@@ -21,12 +21,13 @@
 | 技术 | 版本 | 说明 |
 |------|------|------|
 | Java | 17 | 运行环境 |
-| Spring Boot | 3.5.15 | 核心框架 |
+| Spring Boot | 3.5.16 | 核心框架 |
 | MyBatis-Plus | 3.5.16 | ORM 框架 |
 | Sa-Token | 1.45.0 | 权限认证 |
 | Redisson | 3.52.0 | Redis 客户端 / 分布式锁 |
-| Warm-Flow | 1.8.5 | 工作流引擎 |
+| Warm-Flow | 1.8.9 | 工作流引擎 |
 | SnailJob | 1.10.0 | 分布式任务调度 |
+| dynamic-ds | 4.3.1 | 多数据源 |
 | Mapstruct-Plus | 1.5.0 | 对象转换 |
 | SpringDoc | 2.8.17 | 接口文档（OpenAPI 3） |
 
