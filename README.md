@@ -71,18 +71,18 @@ mysql -uroot -p ry-vue < script/sql/ry_job.sql        # 使用任务调度时执
 
 ### 3.3 启动后端
 
-默认连接 `localhost:3306/ry-vue`（root/root）与 `localhost:6379`（密码 ruoyi123），本地环境不一致时通过环境变量覆盖：
+默认连接 `nicomoe.cn:30000/ry-vue`（root/wang13587）与 `nicomoe.cn:30001`（密码 wang13587），本地环境不一致时通过环境变量覆盖：
 
 | 环境变量 | 默认值 | 说明 |
 |----------|--------|------|
-| `MYSQL_HOST` | localhost | MySQL 地址 |
-| `MYSQL_PORT` | 3306 | MySQL 端口 |
+| `MYSQL_HOST` | nicomoe.cn | MySQL 地址 |
+| `MYSQL_PORT` | 30000 | MySQL 端口 |
 | `MYSQL_ROOT_USER` | root | MySQL 用户名 |
-| `MYSQL_ROOT_PASSWORD` | root | MySQL 密码 |
-| `REDIS_HOST` | localhost | Redis 地址 |
-| `REDIS_PORT` | 6379 | Redis 端口 |
+| `MYSQL_ROOT_PASSWORD` | wang13587 | MySQL 密码 |
+| `REDIS_HOST` | nicomoe.cn | Redis 地址 |
+| `REDIS_PORT` | 30001 | Redis 端口 |
 | `REDIS_DATABASE` | 0 | Redis 数据库编号 |
-| `REDIS_PASSWORD` | ruoyi123 | Redis 密码 |
+| `REDIS_PASSWORD` | wang13587 | Redis 密码 |
 
 后端包含多个独立 Spring Boot 应用，按业务需要选择启动方式：
 
