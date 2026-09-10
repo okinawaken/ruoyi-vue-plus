@@ -46,14 +46,14 @@ java -jar ruoyi-admin/target/ruoyi-admin.jar
 ```bash
 cd plus-ui
 npm install        # 安装依赖
-npm run dev        # 开发启动（Vite 代理后端，端口 9090）
+npm run dev        # 开发启动（Vite 代理后端，端口 7070）
 npm run build:prod # 生产构建
 npm run lint:eslint        # ESLint 检查
 npm run lint:eslint:fix    # ESLint 自动修复
 npm run prettier           # 格式化全部文件
 ```
 
-前端访问 `http://localhost:9090`，默认账号 `admin` / `admin123`。
+前端访问 `http://localhost:7070`，默认账号 `admin` / `admin123`。
 
 ## 2. 开发命令
 

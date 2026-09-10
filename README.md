@@ -125,6 +125,8 @@ npm install
 npm run dev
 ```
 
-浏览器访问 <http://localhost:9090>（Vite 自动代理后端接口）。
+浏览器访问 <http://localhost:7070>（Vite 自动代理后端接口）。
+
+> 前端开发端口在 `plus-ui/.env` 的 `VITE_APP_PORT` 配置，默认 `7070`；已避开 Spring Boot Admin（9090）、主应用（8080）与 SnailJob（8800）等服务端口。
 
 默认账号：`admin` / `admin123`
