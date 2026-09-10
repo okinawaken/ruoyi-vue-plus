@@ -198,7 +198,7 @@ description: |
 - **包名统一 `org.dromara.*`**，不要出现 `com.ruoyi.*`
 - **三层架构**：Controller → Service → Mapper，无 DAO 层
 - **对象转换用 `MapstructUtils.convert()`**，不要写 BeanUtils
-- 技能不需要固定行数要求，以内容实用为准（实际范围 200-650 行）
+- 技能不需要固定行数要求，以内容实用为准
 - **前端内容**：如果技能涉及 UI 交互（文件上传、审批流、权限控制等），且 `plus-ui/` 目录存在，**必须包含前端部分**。不要写"纯后端项目"或"前端在分离项目中"
 
 ### 2.4 前端内容规范（plus-ui 存在时）
@@ -299,7 +299,7 @@ grep "payment-gateway" .claude/hooks/skill-forced-eval.js
 
 **原因**：只创建了 SKILL.md，没有在 Hook 中注册
 
-**解决**：完成第 3 步的两处注册
+**解决**：完成第 3 步的注册（3.1 在 Hook 中添加技能条目），并用 3.2 验证
 
 ### 2. 触发词过于宽泛
 
