@@ -47,6 +47,24 @@ description: |
 | **Warm-Flow** | 1.8.9 | 工作流引擎 | ruoyi-workflow |
 | **BouncyCastle** | 1.83 | 加密算法 | ruoyi-common-encrypt |
 
+### 前端技术栈（plus-ui）
+
+> 当 `plus-ui/` 目录存在时适用。版本取自 `plus-ui/package.json`。
+
+| 技术 | 版本 | 用途 | 备注 |
+|------|------|------|------|
+| **Vue** | 3.5.30 | 前端框架 | 组合式 API，`<script setup lang="ts">` |
+| **Element Plus** | 2.13.5 | UI 组件库 | PC 管理端组件 |
+| **Pinia** | 3.0.4 | 状态管理 | `defineStore` |
+| **Vue Router** | 5.0.3 | 前端路由 | 动态路由 + 权限控制 |
+| **Vite** | 7.3.2 | 构建工具 | 开发端口 7070 |
+| **TypeScript** | ~5.9.3 | 类型系统 | devDependencies |
+| **Axios** | 1.13.6 | HTTP 客户端 | 统一封装于 `src/utils/request` |
+| **ECharts** | 6.0.0 | 数据图表 | 图表展示首选 |
+| **VXE-Table** | 4.18.1 | 高级表格 | 大数据量、可编辑表格 |
+| **Vue I18n** | 11.3.0 | 国际化 | `useI18n()` / `$t()` |
+| **@element-plus/icons-vue** | 2.3.2 | 图标库 | 配合 Element Plus |
+
 ---
 
 ## ruoyi-common 模块速查（24个模块）
