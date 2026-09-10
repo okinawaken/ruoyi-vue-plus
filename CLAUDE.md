@@ -2,18 +2,41 @@
 
 ### 1.1 后端（Maven 多模块）
 
-```bash
-# 完整启动：按顺序启动监控 → 调度 → 主应用（均为独立 Spring Boot 应用）
+三个服务均为独立 Spring Boot 应用，需分别在独立终端按 `监控 → 调度 → 主应用` 顺序启动。
 
-# 1. Spring Boot Admin 服务监控
+**1. 环境变量**（连数据库/Redis 的终端都要先执行）
+
+```bash
+# MySQL
+export MYSQL_HOST=nicomoe.cn
+export MYSQL_PORT=30000
+export MYSQL_ROOT_USER=root
+export MYSQL_ROOT_PASSWORD='wang13587'
+
+# Redis
+export REDIS_HOST=nicomoe.cn
+export REDIS_PORT=30001
+export REDIS_DATABASE=0
+export REDIS_PASSWORD='wang13587'
+```
+
+**2. Spring Boot Admin 服务监控** — 不连数据库，无需环境变量
+
+```bash
 mvn clean package -pl ruoyi-extend/ruoyi-monitor-admin -am
 java -jar ruoyi-extend/ruoyi-monitor-admin/target/ruoyi-monitor-admin.jar
+```
 
-# 2. SnailJob 分布式任务调度
+**3. SnailJob 分布式任务调度** — 连 MySQL
+
+```bash
 mvn clean package -pl ruoyi-extend/ruoyi-snailjob-server -am
 java -jar ruoyi-extend/ruoyi-snailjob-server/target/ruoyi-snailjob-server.jar
+```
 
-# 3. 打包并启动主应用
+**4. 主应用** — 连 MySQL + Redis
+
+```bash
 mvn clean package -pl ruoyi-admin -am
 java -jar ruoyi-admin/target/ruoyi-admin.jar
 ```
